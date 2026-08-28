@@ -1,0 +1,96 @@
+---
+title: "An Overview of the BIOL 4200 Data Science Workflow"
+---
+
+In BIOL 4200, we will use three main tools to work with data and code:
+
+| Tool | What is it? | Why do we use it? |
+| ---- | ----------- | ----------------- |
+| **GitHub Desktop** | A graphical application for working with Git and GitHub repositories.                           | It lets you download your course materials, save your work, and keep your files synchronized with GitHub without needing to learn Git from the command line. |
+| **Miniconda**      | A lightweight installation of Conda, a tool for managing Python installations and environments. | It creates a separate Python environment for BIOL 4200 so that everyone has the same software and package versions.                                          |
+| **VSCode**         | An integrated development environment (IDE) for writing and running code.                       | It provides a single place to edit Python files, work with Jupyter notebooks, and run your analyses.                                                         |
+
+## How the pieces fit together
+
+Think of the three tools as having different jobs:
+
+**GitHub Desktop → Miniconda → VSCode**
+
+1. **GitHub Desktop** manages your **course repository**.
+2. **Miniconda** manages the **Python environment** used by your course code.
+3. **VSCode** is where you **write and run your code and notebooks**.
+
+Your workflow will generally look like this:
+
+```text
+               GitHub (Online)
+                      ↑
+                GitHub Desktop (Syncs files between your local folders and online folders)
+                      │
+              Your BIOL4200 repository
+                      ↓
+                   VSCode (For editing code)     Miniconda (makes sure you have the right Python packages)
+                      ↓                             ↙
+              Jupyter notebooks
+```
+
+## The three tools
+
+### GitHub Desktop
+
+**What is it?**
+
+GitHub Desktop is a graphical interface for Git and GitHub. Git is a version-control system that keeps track of changes to files, while GitHub provides a place to store Git repositories online.
+
+**Why do we use it?**
+
+For this course, GitHub Desktop gives you an easy way to:
+
+* Download your BIOL 4200 repository to your computer.
+* Save changes to your assignments and lab notebooks.
+* Synchronize your work with GitHub.
+* Keep a backup of your work online.
+* Download updates to course materials.
+
+You do **not** need to learn Git from the command line to use GitHub Desktop.
+
+### Miniconda
+
+**What is it?**
+
+Miniconda is a lightweight version of Anaconda that provides the Conda package and environment manager. A Conda environment is an isolated collection of Python and other software packages.
+
+**Why do we use it?**
+
+Python has thousands of packages that can be used for data science. Different packages—and different versions of those packages—can sometimes conflict with one another.
+
+We will create a dedicated environment called `biol4200` containing the software needed for this course. This means that everyone can work with a consistent set of tools.
+
+### VSCode
+
+**What is it?**
+
+Visual Studio Code (VSCode) is an integrated development environment (IDE). It allows you to write, edit, and run code in one application. With the Python and Jupyter extensions installed, it can also run Jupyter notebooks.
+
+**Why do we use it?**
+
+VSCode will be your primary workspace for BIOL 4200. You will use it to:
+
+* Open your GitHub repository.
+* Write and edit Python code.
+* Run Jupyter notebooks.
+* View data and plots.
+* Work with your `biol4200` Python environment.
+
+## What you will install
+
+You will need:
+
+1. **GitHub Desktop**
+2. **Miniconda**
+3. **VSCode**
+4. **Python and Jupyter extensions for VSCode**
+
+The following pages walk you through installing and configuring each tool.
+
+[NEXT UP: GitHub Desktop](github_desktop.qmd)

@@ -1,0 +1,211 @@
+---
+title: "Getting started with Miniconda"
+---
+
+## What is Miniconda?
+
+Miniconda is a lightweight distribution of Python that includes **Conda**, a tool for managing Python environments and software packages.
+
+A Conda **environment** is an isolated installation of Python and the packages needed for a particular project.
+
+**Why do we use it in BIOL 4200?**
+
+Data science relies on many Python packages, such as NumPy, pandas, matplotlib, and scikit-learn. These packages have dependencies and versions that need to work together.
+
+Rather than installing everything directly into your computer's main Python installation, we will create a separate environment called:
+
+```text
+biol4200
+```
+
+This keeps the BIOL 4200 software separate from other Python projects you may work on.
+
+## Step 1: Install Miniconda
+
+Download Miniconda from:
+
+[Download Miniconda](https://www.anaconda.com/download)
+
+You will need to create a free Anaconda account.
+
+**Important:** Download **Miniconda**, not the full Anaconda Distribution.
+
+### Mac
+
+1. Download the Miniconda installer appropriate for your Mac.
+2. Run the installer.
+3. Follow the installation instructions.
+4. If prompted, allow Miniconda to initialize your shell.
+
+After installation, open a new **Terminal** window.
+
+### Windows
+
+1. Download the Windows Miniconda installer.
+2. Run the installer.
+3. Follow the installation instructions.
+4. Open **PowerShell** after installation.
+
+Before continuing, Windows may require you to allow locally created scripts to run.
+
+Open **PowerShell as Administrator**:
+
+1. Open the Start menu.
+2. Search for **PowerShell**.
+3. Right-click PowerShell.
+4. Select **Run as administrator**.
+5. Run:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
+
+If Windows asks you to confirm the change, accept it.
+
+You can then close the Administrator PowerShell window and open a normal PowerShell window.
+
+## Step 2: Open a terminal
+
+You will use the terminal to create and manage your Conda environment.
+
+### Mac
+
+Open **Terminal**.
+
+### Windows
+
+Open **PowerShell** or the terminal provided by your Miniconda installation.
+
+You should be able to run:
+
+```bash
+conda --version
+```
+
+If Conda was installed correctly, you should see a version number.
+
+## Step 3: Create the BIOL4200 environment
+
+Create a new environment called `biol4200` with Python 3.14:
+
+```bash
+conda create -n biol4200 python=3.14
+```
+
+Conda will ask you to confirm the installation. Type:
+
+```text
+y
+```
+
+and press Enter.
+
+## Step 4: Activate the environment
+
+Activate your new environment:
+
+```bash
+conda activate biol4200
+```
+
+You should now see something like this at the beginning of your command prompt:
+
+```text
+(biol4200)
+```
+
+This tells you that you are working inside the BIOL 4200 environment.
+
+### Important
+
+You will generally need to activate this environment before running your BIOL 4200 Python code.
+
+If you open a new terminal later, run:
+
+```bash
+conda activate biol4200
+```
+
+again.
+
+## Step 5: Download the requirements file
+
+Download the BIOL 4200 `requirements.txt` file from Canvas and place it inside your `BIOL4200homework` repository.
+
+The file tells Python which packages need to be installed for the course.
+
+Your repository should look something like:
+
+```text
+BIOL4200homework/
+├── lab_notebook.ipynb
+├── requirements.txt
+└── ...
+```
+
+## Step 6: Install the required packages
+
+Make sure your `biol4200` environment is activated:
+
+```bash
+conda activate biol4200
+```
+
+Navigate to your repository using the terminal, then run:
+
+```bash
+pip install -r requirements.txt
+```
+
+This will install the Python packages listed in `requirements.txt`.
+
+## Step 7: Make the environment available to Jupyter
+
+We will use Jupyter notebooks throughout the course.
+
+Install the BIOL 4200 environment as a Jupyter kernel:
+
+```bash
+python -m ipykernel install --user --name biol4200 --display-name "Python (BIOL4200)"
+```
+
+This tells Jupyter that it can use your `biol4200` environment.
+
+## Step 8: Test the installation
+
+Run:
+
+```bash
+jupyter notebook
+```
+
+If everything was installed correctly, Jupyter should open in your web browser.
+
+You should be able to select:
+
+**Python (BIOL4200)**
+
+as a notebook kernel.
+
+## Troubleshooting
+
+If `conda` is not recognized, close your terminal and open a new one.
+
+On Windows, you may need to open the `Anaconda Prompt` application and run
+```zsh
+conda init
+```
+
+If `conda activate biol4200` does not work on Windows, open PowerShell in administrator mode and run the following command:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
+
+If you receive an error while installing packages, make sure that your `biol4200` environment is activated before running:
+
+```bash
+pip install -r requirements.txt
+```
+
+[NEXT UP: VSCode](vscode.qmd)

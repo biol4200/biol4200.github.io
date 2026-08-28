@@ -1,0 +1,97 @@
+---
+title: "Getting started with GitHub Desktop"
+---
+
+## What is GitHub Desktop?
+
+GitHub Desktop is a graphical application for working with **Git** and **GitHub**.
+
+Git is a version-control system. It keeps track of changes to your files so that you can save versions of your work and synchronize those changes with a repository stored on GitHub.
+
+**Why do we use it in BIOL 4200?**
+
+You will use GitHub Desktop to manage your course repository. In particular, it will allow you to:
+
+* Download your BIOL 4200 repository to your computer.
+* Save your work to GitHub.
+* Download updates to course materials.
+* Keep a backup of your work.
+* Work with Git without using the command line.
+
+## Step 1: Create a GitHub account
+
+If you do not already have one, create a free GitHub account:
+
+[Create a GitHub account](https://github.com/)
+
+Use an email address that you regularly check.
+
+## Step 2: Install GitHub Desktop
+
+Download GitHub Desktop:
+
+[Download GitHub Desktop](https://desktop.github.com/download)
+
+### Mac
+
+1. Download the macOS version.
+2. Open the downloaded file.
+3. Drag GitHub Desktop into your Applications folder.
+4. Open GitHub Desktop.
+5. Sign in using your GitHub account.
+
+### Windows
+
+1. Download the Windows version.
+2. Run the installer.
+3. Open GitHub Desktop.
+4. Sign in using your GitHub account.
+
+## Step 3: Create your BIOL4200 repository
+
+On GitHub (online), create a new repository called:
+
+**`BIOL4200homework`**
+
+You can make the repository private unless I tell you otherwise.
+
+## Step 4: Clone your repository
+
+Once your repository exists on GitHub:
+
+1. Open GitHub Desktop.
+2. Select **File → Clone repository**.
+3. Find your `BIOL4200homework` repository.
+4. Choose where you would like to store it on your computer. (I recommend `Documents/GitHub`)
+5. Click **Clone**.
+
+GitHub Desktop will now create a copy of your repository on your computer. This local copy is the folder that you will open in VSCode.
+
+## Step 5: Add your lab notebook
+
+Place your lab notebook in your `BIOL4200homework` folder.
+
+You should eventually have something like:
+
+```text
+BIOL4200homework/
+├── lab_notebook.ipynb
+├── requirements.txt
+└── ...
+```
+
+The exact contents of the repository will depend on the assignment.
+
+## A note about saving your work
+
+GitHub Desktop uses a workflow called **commit → push**.
+
+When you make changes to your files:
+
+1. GitHub Desktop notices the changes.
+2. You create a **commit**, which records a snapshot of your changes.
+3. You **push** the commit to GitHub.
+
+You should get into the habit of committing and pushing your work regularly. That way, if something goes wrong on your computer, your work is safely stored on GitHub.
+
+[NEXT UP: Miniconda](miniconda.qmd)

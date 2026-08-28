@@ -1,0 +1,218 @@
+---
+title: "Getting started with VSCode"
+---
+
+## What is VSCode?
+
+Visual Studio Code (VSCode) is an **integrated development environment (IDE)**. An IDE is an application that provides tools for writing, editing, and running computer code.
+
+VSCode can also work with **Jupyter notebooks**, which allow you to combine code, data, visualizations, and written explanations in the same document.
+
+**Why do we use it in BIOL 4200?**
+
+VSCode will be your primary workspace for the course. You will use it to:
+
+* Open your `BIOL4200homework` repository.
+* Edit Python code.
+* Work with Jupyter notebooks.
+* Run analyses.
+* Create figures and visualizations.
+* Select and use your `biol4200` Conda environment.
+
+## Step 1: Install VSCode
+
+Download VSCode:
+
+[Download VSCode](https://code.visualstudio.com/)
+
+### Mac
+
+1. Download the macOS version.
+2. Open the downloaded file.
+3. Move Visual Studio Code to your Applications folder.
+4. Open VSCode.
+
+### Windows
+
+1. Download the Windows installer.
+2. Run the installer.
+3. Follow the installation instructions.
+4. Open VSCode.
+
+## Step 2: Install the Python extension
+
+Open VSCode.
+
+On the left side of the window, click the **Extensions** icon.
+
+Search for:
+
+```text
+Python
+```
+
+Install the **Python** extension published by Microsoft.
+
+## Step 3: Install the Jupyter extension
+
+In the Extensions panel, search for:
+
+```text
+Jupyter
+```
+
+Install the **Jupyter** extension published by Microsoft.
+
+You should now have both:
+
+* **Python**
+* **Jupyter**
+
+installed in VSCode.
+
+## Step 4: Open your BIOL4200 repository
+
+In VSCode, select:
+
+**File → Open Folder**
+
+Navigate to your `BIOL4200homework` folder and open it.
+
+You should see your repository's files in the Explorer panel on the left.
+
+For example:
+
+```text
+BIOL4200homework
+├── requirements.txt
+└── ...
+```
+
+## Step 5: Select the BIOL4200 Python environment
+
+Open your Jupyter notebook.
+
+Near the top-right of the notebook, you should see an option for selecting the **kernel**.
+
+Click it and select:
+
+```text
+Python (BIOL4200)
+```
+
+If you do not see it, you may need to select:
+
+**Select Another Kernel → Python Environments**
+
+and then choose the Python installation associated with:
+
+```text
+biol4200
+```
+
+## Step 6: Run a test
+
+Create a new cell in your notebook and enter:
+
+```python
+print("Hello, BIOL 4200!")
+```
+
+Run the cell.
+
+You should see:
+
+```text
+Hello, BIOL 4200!
+```
+
+You can also test that you are using the correct Python environment:
+
+```python
+import sys
+
+print(sys.executable)
+```
+
+The resulting path should contain something indicating that you are using the `biol4200` environment.
+
+## Your BIOL4200 workflow
+
+Once everything is installed, your typical workflow will look like this:
+
+### 1. Open GitHub Desktop
+
+Use GitHub Desktop to synchronize your repository with GitHub.
+
+### 2. Open VSCode
+
+Open your `BIOL4200homework` folder.
+
+### 3. Select the BIOL4200 environment
+
+Make sure your notebook is using:
+
+```text
+Python (BIOL4200)
+```
+
+### 4. Work on your notebook
+
+Write and run your Python code in VSCode.
+
+### 5. Save your work
+
+Save your notebook and any other files you have changed.
+
+### 6. Commit and push your changes
+
+Open GitHub Desktop and commit your changes.
+
+Then push them to GitHub.
+
+This gives you a complete workflow:
+
+```text
+GitHub Desktop
+      ↓
+Download/synchronize your repository
+      ↓
+     VSCode
+      ↓
+Write and run your analysis
+      ↓
+   Miniconda
+      ↓
+Python + data science packages
+      ↓
+     VSCode
+      ↓
+Save your work
+      ↓
+GitHub Desktop
+      ↓
+Commit + push
+      ↓
+    GitHub
+```
+
+## Final checklist
+
+Before starting your first assignment, make sure you have:
+
+* [ ] A GitHub account
+* [ ] A `BIOL4200homework` repository
+* [ ] GitHub Desktop installed
+* [ ] Your repository cloned to your computer
+* [ ] Miniconda installed
+* [ ] A Conda environment called `biol4200`
+* [ ] Python 3.14 installed in the environment
+* [ ] `requirements.txt` in your repository
+* [ ] All required packages installed
+* [ ] A Jupyter kernel called **Python (BIOL4200)**
+* [ ] VSCode installed
+* [ ] The Python VSCode extension installed
+* [ ] The Jupyter VSCode extension installed
+* [ ] Your BIOL 4200 notebook running successfully
+
+If all of these boxes are checked, you're ready to start coding!

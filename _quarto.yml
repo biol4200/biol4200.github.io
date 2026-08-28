@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+  resources:
+    - pages/members.json
+
+website:
+  open-graph: true
+  title: "BIOL 4200"
+  site-url: https://biol4200.github.io
+  repo-url: https://github.com/biol4200/biol4200.github.io
+  favicon: assets/images/uva.ico
+
+  navbar:
+    style: "floating"
+    background: dark
+    foreground: light
+    left:
+      - href: index.qmd
+        text: Home
+      - href: pages/workflow_overview.qmd
+        text: Data Science Workflow
+    search: true
+    pinned: true
+
+format:
+  html:
+    theme: spacelab
+    mainfont: franklin-gothic, sans-serif
+    toc: true
+    smooth-scroll: true
+    html-math-method: katex
+    include-in-header:
+      - includes.html
+    footnotes-hover: false
+    code-fold: true
