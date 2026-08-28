@@ -1,0 +1,240 @@
+[
+  {
+    "objectID": "pages/workflow_overview.html",
+    "href": "pages/workflow_overview.html",
+    "title": "An Overview of the BIOL 4200 Data Science Workflow",
+    "section": "",
+    "text": "In BIOL 4200, we will use three main tools to work with data and code:"
+  },
+  {
+    "objectID": "pages/workflow_overview.html#how-the-pieces-fit-together",
+    "href": "pages/workflow_overview.html#how-the-pieces-fit-together",
+    "title": "An Overview of the BIOL 4200 Data Science Workflow",
+    "section": "How the pieces fit together",
+    "text": "How the pieces fit together\nThink of the three tools as having different jobs:\nGitHub Desktop → Miniconda → VSCode\n\nGitHub Desktop manages your course repository.\nMiniconda manages the Python environment used by your course code.\nVSCode is where you write and run your code and notebooks.\n\nYour workflow will generally look like this:\n               GitHub (Online)\n                      ↑\n                GitHub Desktop (Syncs files between your local folders and online folders)\n                      │\n              Your BIOL4200 repository\n                      ↓\n                   VSCode (For editing code)     Miniconda (makes sure you have the right Python packages)\n                      ↓                             ↙\n              Jupyter notebooks"
+  },
+  {
+    "objectID": "pages/workflow_overview.html#the-three-tools",
+    "href": "pages/workflow_overview.html#the-three-tools",
+    "title": "An Overview of the BIOL 4200 Data Science Workflow",
+    "section": "The three tools",
+    "text": "The three tools\n\nGitHub Desktop\nWhat is it?\nGitHub Desktop is a graphical interface for Git and GitHub. Git is a version-control system that keeps track of changes to files, while GitHub provides a place to store Git repositories online.\nWhy do we use it?\nFor this course, GitHub Desktop gives you an easy way to:\n\nDownload your BIOL 4200 repository to your computer.\nSave changes to your assignments and lab notebooks.\nSynchronize your work with GitHub.\nKeep a backup of your work online.\nDownload updates to course materials.\n\nYou do not need to learn Git from the command line to use GitHub Desktop.\n\n\nMiniconda\nWhat is it?\nMiniconda is a lightweight version of Anaconda that provides the Conda package and environment manager. A Conda environment is an isolated collection of Python and other software packages.\nWhy do we use it?\nPython has thousands of packages that can be used for data science. Different packages—and different versions of those packages—can sometimes conflict with one another.\nWe will create a dedicated environment called biol4200 containing the software needed for this course. This means that everyone can work with a consistent set of tools.\n\n\nVSCode\nWhat is it?\nVisual Studio Code (VSCode) is an integrated development environment (IDE). It allows you to write, edit, and run code in one application. With the Python and Jupyter extensions installed, it can also run Jupyter notebooks.\nWhy do we use it?\nVSCode will be your primary workspace for BIOL 4200. You will use it to:\n\nOpen your GitHub repository.\nWrite and edit Python code.\nRun Jupyter notebooks.\nView data and plots.\nWork with your biol4200 Python environment."
+  },
+  {
+    "objectID": "pages/workflow_overview.html#what-you-will-install",
+    "href": "pages/workflow_overview.html#what-you-will-install",
+    "title": "An Overview of the BIOL 4200 Data Science Workflow",
+    "section": "What you will install",
+    "text": "What you will install\nYou will need:\n\nGitHub Desktop\nMiniconda\nVSCode\nPython and Jupyter extensions for VSCode\n\nThe following pages walk you through installing and configuring each tool.\nNEXT UP: GitHub Desktop"
+  },
+  {
+    "objectID": "pages/miniconda.html",
+    "href": "pages/miniconda.html",
+    "title": "Getting started with Miniconda",
+    "section": "",
+    "text": "Miniconda is a lightweight distribution of Python that includes Conda, a tool for managing Python environments and software packages.\nA Conda environment is an isolated installation of Python and the packages needed for a particular project.\nWhy do we use it in BIOL 4200?\nData science relies on many Python packages, such as NumPy, pandas, matplotlib, and scikit-learn. These packages have dependencies and versions that need to work together.\nRather than installing everything directly into your computer’s main Python installation, we will create a separate environment called:\nbiol4200\nThis keeps the BIOL 4200 software separate from other Python projects you may work on."
+  },
+  {
+    "objectID": "pages/miniconda.html#what-is-miniconda",
+    "href": "pages/miniconda.html#what-is-miniconda",
+    "title": "Getting started with Miniconda",
+    "section": "",
+    "text": "Miniconda is a lightweight distribution of Python that includes Conda, a tool for managing Python environments and software packages.\nA Conda environment is an isolated installation of Python and the packages needed for a particular project.\nWhy do we use it in BIOL 4200?\nData science relies on many Python packages, such as NumPy, pandas, matplotlib, and scikit-learn. These packages have dependencies and versions that need to work together.\nRather than installing everything directly into your computer’s main Python installation, we will create a separate environment called:\nbiol4200\nThis keeps the BIOL 4200 software separate from other Python projects you may work on."
+  },
+  {
+    "objectID": "pages/miniconda.html#step-1-install-miniconda",
+    "href": "pages/miniconda.html#step-1-install-miniconda",
+    "title": "Getting started with Miniconda",
+    "section": "Step 1: Install Miniconda",
+    "text": "Step 1: Install Miniconda\nDownload Miniconda from:\nDownload Miniconda\nYou will need to create a free Anaconda account.\nImportant: Download Miniconda, not the full Anaconda Distribution.\n\nMac\n\nDownload the Miniconda installer appropriate for your Mac.\nRun the installer.\nFollow the installation instructions.\nIf prompted, allow Miniconda to initialize your shell.\n\nAfter installation, open a new Terminal window.\n\n\nWindows\n\nDownload the Windows Miniconda installer.\nRun the installer.\nFollow the installation instructions.\nOpen PowerShell after installation.\n\nBefore continuing, Windows may require you to allow locally created scripts to run.\nOpen PowerShell as Administrator:\n\nOpen the Start menu.\nSearch for PowerShell.\nRight-click PowerShell.\nSelect Run as administrator.\nRun:\n\nSet-ExecutionPolicy RemoteSigned\nIf Windows asks you to confirm the change, accept it.\nYou can then close the Administrator PowerShell window and open a normal PowerShell window."
+  },
+  {
+    "objectID": "pages/miniconda.html#step-2-open-a-terminal",
+    "href": "pages/miniconda.html#step-2-open-a-terminal",
+    "title": "Getting started with Miniconda",
+    "section": "Step 2: Open a terminal",
+    "text": "Step 2: Open a terminal\nYou will use the terminal to create and manage your Conda environment.\n\nMac\nOpen Terminal.\n\n\nWindows\nOpen PowerShell or the terminal provided by your Miniconda installation.\nYou should be able to run:\nconda --version\nIf Conda was installed correctly, you should see a version number."
+  },
+  {
+    "objectID": "pages/miniconda.html#step-3-create-the-biol4200-environment",
+    "href": "pages/miniconda.html#step-3-create-the-biol4200-environment",
+    "title": "Getting started with Miniconda",
+    "section": "Step 3: Create the BIOL4200 environment",
+    "text": "Step 3: Create the BIOL4200 environment\nCreate a new environment called biol4200 with Python 3.14:\nconda create -n biol4200 python=3.14\nConda will ask you to confirm the installation. Type:\ny\nand press Enter."
+  },
+  {
+    "objectID": "pages/miniconda.html#step-4-activate-the-environment",
+    "href": "pages/miniconda.html#step-4-activate-the-environment",
+    "title": "Getting started with Miniconda",
+    "section": "Step 4: Activate the environment",
+    "text": "Step 4: Activate the environment\nActivate your new environment:\nconda activate biol4200\nYou should now see something like this at the beginning of your command prompt:\n(biol4200)\nThis tells you that you are working inside the BIOL 4200 environment.\n\nImportant\nYou will generally need to activate this environment before running your BIOL 4200 Python code.\nIf you open a new terminal later, run:\nconda activate biol4200\nagain."
+  },
+  {
+    "objectID": "pages/miniconda.html#step-5-download-the-requirements-file",
+    "href": "pages/miniconda.html#step-5-download-the-requirements-file",
+    "title": "Getting started with Miniconda",
+    "section": "Step 5: Download the requirements file",
+    "text": "Step 5: Download the requirements file\nDownload the BIOL 4200 requirements.txt file from Canvas and place it inside your BIOL4200homework repository.\nThe file tells Python which packages need to be installed for the course.\nYour repository should look something like:\nBIOL4200homework/\n├── lab_notebook.ipynb\n├── requirements.txt\n└── ..."
+  },
+  {
+    "objectID": "pages/miniconda.html#step-6-install-the-required-packages",
+    "href": "pages/miniconda.html#step-6-install-the-required-packages",
+    "title": "Getting started with Miniconda",
+    "section": "Step 6: Install the required packages",
+    "text": "Step 6: Install the required packages\nMake sure your biol4200 environment is activated:\nconda activate biol4200\nNavigate to your repository using the terminal, then run:\npip install -r requirements.txt\nThis will install the Python packages listed in requirements.txt."
+  },
+  {
+    "objectID": "pages/miniconda.html#step-7-make-the-environment-available-to-jupyter",
+    "href": "pages/miniconda.html#step-7-make-the-environment-available-to-jupyter",
+    "title": "Getting started with Miniconda",
+    "section": "Step 7: Make the environment available to Jupyter",
+    "text": "Step 7: Make the environment available to Jupyter\nWe will use Jupyter notebooks throughout the course.\nInstall the BIOL 4200 environment as a Jupyter kernel:\npython -m ipykernel install --user --name biol4200 --display-name \"Python (BIOL4200)\"\nThis tells Jupyter that it can use your biol4200 environment."
+  },
+  {
+    "objectID": "pages/miniconda.html#step-8-test-the-installation",
+    "href": "pages/miniconda.html#step-8-test-the-installation",
+    "title": "Getting started with Miniconda",
+    "section": "Step 8: Test the installation",
+    "text": "Step 8: Test the installation\nRun:\njupyter notebook\nIf everything was installed correctly, Jupyter should open in your web browser.\nYou should be able to select:\nPython (BIOL4200)\nas a notebook kernel."
+  },
+  {
+    "objectID": "pages/miniconda.html#troubleshooting",
+    "href": "pages/miniconda.html#troubleshooting",
+    "title": "Getting started with Miniconda",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\nIf conda is not recognized, close your terminal and open a new one.\nOn Windows, you may need to open the Anaconda Prompt application and run\nconda init\nIf conda activate biol4200 does not work on Windows, open PowerShell in administrator mode and run the following command:\nSet-ExecutionPolicy RemoteSigned\nIf you receive an error while installing packages, make sure that your biol4200 environment is activated before running:\npip install -r requirements.txt\nNEXT UP: VSCode"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIOL 4200 Resources",
+    "section": "",
+    "text": "Setting up your data science workflow"
+  },
+  {
+    "objectID": "pages/github_desktop.html",
+    "href": "pages/github_desktop.html",
+    "title": "Getting started with GitHub Desktop",
+    "section": "",
+    "text": "GitHub Desktop is a graphical application for working with Git and GitHub.\nGit is a version-control system. It keeps track of changes to your files so that you can save versions of your work and synchronize those changes with a repository stored on GitHub.\nWhy do we use it in BIOL 4200?\nYou will use GitHub Desktop to manage your course repository. In particular, it will allow you to:\n\nDownload your BIOL 4200 repository to your computer.\nSave your work to GitHub.\nDownload updates to course materials.\nKeep a backup of your work.\nWork with Git without using the command line."
+  },
+  {
+    "objectID": "pages/github_desktop.html#what-is-github-desktop",
+    "href": "pages/github_desktop.html#what-is-github-desktop",
+    "title": "Getting started with GitHub Desktop",
+    "section": "",
+    "text": "GitHub Desktop is a graphical application for working with Git and GitHub.\nGit is a version-control system. It keeps track of changes to your files so that you can save versions of your work and synchronize those changes with a repository stored on GitHub.\nWhy do we use it in BIOL 4200?\nYou will use GitHub Desktop to manage your course repository. In particular, it will allow you to:\n\nDownload your BIOL 4200 repository to your computer.\nSave your work to GitHub.\nDownload updates to course materials.\nKeep a backup of your work.\nWork with Git without using the command line."
+  },
+  {
+    "objectID": "pages/github_desktop.html#step-1-create-a-github-account",
+    "href": "pages/github_desktop.html#step-1-create-a-github-account",
+    "title": "Getting started with GitHub Desktop",
+    "section": "Step 1: Create a GitHub account",
+    "text": "Step 1: Create a GitHub account\nIf you do not already have one, create a free GitHub account:\nCreate a GitHub account\nUse an email address that you regularly check."
+  },
+  {
+    "objectID": "pages/github_desktop.html#step-2-install-github-desktop",
+    "href": "pages/github_desktop.html#step-2-install-github-desktop",
+    "title": "Getting started with GitHub Desktop",
+    "section": "Step 2: Install GitHub Desktop",
+    "text": "Step 2: Install GitHub Desktop\nDownload GitHub Desktop:\nDownload GitHub Desktop\n\nMac\n\nDownload the macOS version.\nOpen the downloaded file.\nDrag GitHub Desktop into your Applications folder.\nOpen GitHub Desktop.\nSign in using your GitHub account.\n\n\n\nWindows\n\nDownload the Windows version.\nRun the installer.\nOpen GitHub Desktop.\nSign in using your GitHub account."
+  },
+  {
+    "objectID": "pages/github_desktop.html#step-3-create-your-biol4200-repository",
+    "href": "pages/github_desktop.html#step-3-create-your-biol4200-repository",
+    "title": "Getting started with GitHub Desktop",
+    "section": "Step 3: Create your BIOL4200 repository",
+    "text": "Step 3: Create your BIOL4200 repository\nOn GitHub (online), create a new repository called:\nBIOL4200homework\nYou can make the repository private unless I tell you otherwise."
+  },
+  {
+    "objectID": "pages/github_desktop.html#step-4-clone-your-repository",
+    "href": "pages/github_desktop.html#step-4-clone-your-repository",
+    "title": "Getting started with GitHub Desktop",
+    "section": "Step 4: Clone your repository",
+    "text": "Step 4: Clone your repository\nOnce your repository exists on GitHub:\n\nOpen GitHub Desktop.\nSelect File → Clone repository.\nFind your BIOL4200homework repository.\nChoose where you would like to store it on your computer. (I recommend Documents/GitHub)\nClick Clone.\n\nGitHub Desktop will now create a copy of your repository on your computer. This local copy is the folder that you will open in VSCode."
+  },
+  {
+    "objectID": "pages/github_desktop.html#step-5-add-your-lab-notebook",
+    "href": "pages/github_desktop.html#step-5-add-your-lab-notebook",
+    "title": "Getting started with GitHub Desktop",
+    "section": "Step 5: Add your lab notebook",
+    "text": "Step 5: Add your lab notebook\nPlace your lab notebook in your BIOL4200homework folder.\nYou should eventually have something like:\nBIOL4200homework/\n├── lab_notebook.ipynb\n├── requirements.txt\n└── ...\nThe exact contents of the repository will depend on the assignment."
+  },
+  {
+    "objectID": "pages/github_desktop.html#a-note-about-saving-your-work",
+    "href": "pages/github_desktop.html#a-note-about-saving-your-work",
+    "title": "Getting started with GitHub Desktop",
+    "section": "A note about saving your work",
+    "text": "A note about saving your work\nGitHub Desktop uses a workflow called commit → push.\nWhen you make changes to your files:\n\nGitHub Desktop notices the changes.\nYou create a commit, which records a snapshot of your changes.\nYou push the commit to GitHub.\n\nYou should get into the habit of committing and pushing your work regularly. That way, if something goes wrong on your computer, your work is safely stored on GitHub.\nNEXT UP: Miniconda"
+  },
+  {
+    "objectID": "pages/vscode.html",
+    "href": "pages/vscode.html",
+    "title": "Getting started with VSCode",
+    "section": "",
+    "text": "Visual Studio Code (VSCode) is an integrated development environment (IDE). An IDE is an application that provides tools for writing, editing, and running computer code.\nVSCode can also work with Jupyter notebooks, which allow you to combine code, data, visualizations, and written explanations in the same document.\nWhy do we use it in BIOL 4200?\nVSCode will be your primary workspace for the course. You will use it to:\n\nOpen your BIOL4200homework repository.\nEdit Python code.\nWork with Jupyter notebooks.\nRun analyses.\nCreate figures and visualizations.\nSelect and use your biol4200 Conda environment."
+  },
+  {
+    "objectID": "pages/vscode.html#what-is-vscode",
+    "href": "pages/vscode.html#what-is-vscode",
+    "title": "Getting started with VSCode",
+    "section": "",
+    "text": "Visual Studio Code (VSCode) is an integrated development environment (IDE). An IDE is an application that provides tools for writing, editing, and running computer code.\nVSCode can also work with Jupyter notebooks, which allow you to combine code, data, visualizations, and written explanations in the same document.\nWhy do we use it in BIOL 4200?\nVSCode will be your primary workspace for the course. You will use it to:\n\nOpen your BIOL4200homework repository.\nEdit Python code.\nWork with Jupyter notebooks.\nRun analyses.\nCreate figures and visualizations.\nSelect and use your biol4200 Conda environment."
+  },
+  {
+    "objectID": "pages/vscode.html#step-1-install-vscode",
+    "href": "pages/vscode.html#step-1-install-vscode",
+    "title": "Getting started with VSCode",
+    "section": "Step 1: Install VSCode",
+    "text": "Step 1: Install VSCode\nDownload VSCode:\nDownload VSCode\n\nMac\n\nDownload the macOS version.\nOpen the downloaded file.\nMove Visual Studio Code to your Applications folder.\nOpen VSCode.\n\n\n\nWindows\n\nDownload the Windows installer.\nRun the installer.\nFollow the installation instructions.\nOpen VSCode."
+  },
+  {
+    "objectID": "pages/vscode.html#step-2-install-the-python-extension",
+    "href": "pages/vscode.html#step-2-install-the-python-extension",
+    "title": "Getting started with VSCode",
+    "section": "Step 2: Install the Python extension",
+    "text": "Step 2: Install the Python extension\nOpen VSCode.\nOn the left side of the window, click the Extensions icon.\nSearch for:\nPython\nInstall the Python extension published by Microsoft."
+  },
+  {
+    "objectID": "pages/vscode.html#step-3-install-the-jupyter-extension",
+    "href": "pages/vscode.html#step-3-install-the-jupyter-extension",
+    "title": "Getting started with VSCode",
+    "section": "Step 3: Install the Jupyter extension",
+    "text": "Step 3: Install the Jupyter extension\nIn the Extensions panel, search for:\nJupyter\nInstall the Jupyter extension published by Microsoft.\nYou should now have both:\n\nPython\nJupyter\n\ninstalled in VSCode."
+  },
+  {
+    "objectID": "pages/vscode.html#step-4-open-your-biol4200-repository",
+    "href": "pages/vscode.html#step-4-open-your-biol4200-repository",
+    "title": "Getting started with VSCode",
+    "section": "Step 4: Open your BIOL4200 repository",
+    "text": "Step 4: Open your BIOL4200 repository\nIn VSCode, select:\nFile → Open Folder\nNavigate to your BIOL4200homework folder and open it.\nYou should see your repository’s files in the Explorer panel on the left.\nFor example:\nBIOL4200homework\n├── requirements.txt\n└── ..."
+  },
+  {
+    "objectID": "pages/vscode.html#step-5-select-the-biol4200-python-environment",
+    "href": "pages/vscode.html#step-5-select-the-biol4200-python-environment",
+    "title": "Getting started with VSCode",
+    "section": "Step 5: Select the BIOL4200 Python environment",
+    "text": "Step 5: Select the BIOL4200 Python environment\nOpen your Jupyter notebook.\nNear the top-right of the notebook, you should see an option for selecting the kernel.\nClick it and select:\nPython (BIOL4200)\nIf you do not see it, you may need to select:\nSelect Another Kernel → Python Environments\nand then choose the Python installation associated with:\nbiol4200"
+  },
+  {
+    "objectID": "pages/vscode.html#step-6-run-a-test",
+    "href": "pages/vscode.html#step-6-run-a-test",
+    "title": "Getting started with VSCode",
+    "section": "Step 6: Run a test",
+    "text": "Step 6: Run a test\nCreate a new cell in your notebook and enter:\nprint(\"Hello, BIOL 4200!\")\nRun the cell.\nYou should see:\nHello, BIOL 4200!\nYou can also test that you are using the correct Python environment:\nimport sys\n\nprint(sys.executable)\nThe resulting path should contain something indicating that you are using the biol4200 environment."
+  },
+  {
+    "objectID": "pages/vscode.html#your-biol4200-workflow",
+    "href": "pages/vscode.html#your-biol4200-workflow",
+    "title": "Getting started with VSCode",
+    "section": "Your BIOL4200 workflow",
+    "text": "Your BIOL4200 workflow\nOnce everything is installed, your typical workflow will look like this:\n\n1. Open GitHub Desktop\nUse GitHub Desktop to synchronize your repository with GitHub.\n\n\n2. Open VSCode\nOpen your BIOL4200homework folder.\n\n\n3. Select the BIOL4200 environment\nMake sure your notebook is using:\nPython (BIOL4200)\n\n\n4. Work on your notebook\nWrite and run your Python code in VSCode.\n\n\n5. Save your work\nSave your notebook and any other files you have changed.\n\n\n6. Commit and push your changes\nOpen GitHub Desktop and commit your changes.\nThen push them to GitHub.\nThis gives you a complete workflow:\nGitHub Desktop\n      ↓\nDownload/synchronize your repository\n      ↓\n     VSCode\n      ↓\nWrite and run your analysis\n      ↓\n   Miniconda\n      ↓\nPython + data science packages\n      ↓\n     VSCode\n      ↓\nSave your work\n      ↓\nGitHub Desktop\n      ↓\nCommit + push\n      ↓\n    GitHub"
+  },
+  {
+    "objectID": "pages/vscode.html#final-checklist",
+    "href": "pages/vscode.html#final-checklist",
+    "title": "Getting started with VSCode",
+    "section": "Final checklist",
+    "text": "Final checklist\nBefore starting your first assignment, make sure you have:\n\nA GitHub account\nA BIOL4200homework repository\nGitHub Desktop installed\nYour repository cloned to your computer\nMiniconda installed\nA Conda environment called biol4200\nPython 3.14 installed in the environment\nrequirements.txt in your repository\nAll required packages installed\nA Jupyter kernel called Python (BIOL4200)\nVSCode installed\nThe Python VSCode extension installed\nThe Jupyter VSCode extension installed\nYour BIOL 4200 notebook running successfully\n\nIf all of these boxes are checked, you’re ready to start coding!"
+  }
+]
